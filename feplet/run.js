@@ -43,10 +43,13 @@ for (let file of sourceFiles) {
 
   data[targetTag] = dataOptions[targetTag];
 
+  const dataKeys = feplet.preprocessContextKeys(data);
+
   const buildText = feplet.render(
     sourceText,
     data,
-    partials
+    partials,
+    dataKeys
   );
 
   fs.writeFileSync(`build/${basename}.txt`, buildText);
