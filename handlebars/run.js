@@ -18,6 +18,10 @@ const partialFiles = glob.sync('**/*.hbs', {cwd: partialsDir});
 
 // Prep cleanup.
 fs.readdirSync(buildDir).forEach((file) => {
+  if (file.charAt(0) === '.') {
+    return;
+  }
+
   fs.unlinkSync(`${buildDir}/${file}`);
 });
 
@@ -49,8 +53,8 @@ for (let file of sourceFiles) {
   fs.writeFileSync(`build/${basename}.txt`, buildText);
 }
 
-const end = Date.now();
-const elapsed = (end - start) / 1000;
+const stop = Date.now();
+const elapsed = (stop - start) / 1000;
 const used = process.memoryUsage().heapUsed / 1024 / 1024;
 
 console.log(`Time elapsed: ${Math.round(elapsed * 100) / 100} sec`);

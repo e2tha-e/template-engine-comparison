@@ -7,23 +7,22 @@ process.chdir(__dirname);
 const fs = require('fs');
 const path = require('path');
 
-const feplet = require('feplet');
+const Feplet = require('feplet');
 const glob = require('glob');
 
 const enc = 'utf8';
 const buildDir = 'build';
-const partials = {};
 const partialsDir = 'partials';
 const partialFiles = glob.sync('**/*.fpt', {cwd: partialsDir});
 
 // Prep cleanup.
 fs.readdirSync(buildDir).forEach((file) => {
+  if (file.charAt(0) === '.') {
+    return;
+  }
+
   fs.unlinkSync(`${buildDir}/${file}`);
 });
-
-for (let file of partialFiles) {
-  partials[file] = fs.readFileSync(path.resolve(partialsDir, file), enc);
-}
 
 const dataOptions = {
   '00-page~~element': [{content: 'lorem'}],
@@ -32,6 +31,19 @@ const dataOptions = {
   '03-page~~element': [{content: 'sit'}],
   '04-page~~element': [{content: 'amet'}]
 };
+
+const contextKeysArr = Feplet.preprocessContextKeys(dataOptions);
+
+let partials = {};
+let partialsComp = {};
+
+for (let file of partialFiles) {
+  ({
+    partials,
+    partialsComp
+  } = Feplet.registerPartial(file, fs.readFileSync(path.resolve(partialsDir, file), enc), null, partials, partialsComp));
+}
+
 const sourceDir = 'source';
 const sourceFiles = glob.sync('**/*.fpt', {cwd: sourceDir});
 
@@ -43,20 +55,14 @@ for (let file of sourceFiles) {
 
   data[targetTag] = dataOptions[targetTag];
 
-  const dataKeys = feplet.preprocessContextKeys(data);
-
-  const buildText = feplet.render(
-    sourceText,
-    data,
-    partials,
-    dataKeys
-  );
+  const feplet = new Feplet(data, partials, partialsComp);
+  const buildText = feplet.render(sourceText, data, partials);
 
   fs.writeFileSync(`build/${basename}.txt`, buildText);
 }
 
-const end = Date.now();
-const elapsed = (end - start) / 1000;
+const stop = Date.now();
+const elapsed = (stop - start) / 1000;
 const used = process.memoryUsage().heapUsed / 1024 / 1024;
 
 console.log(`Time elapsed: ${Math.round(elapsed * 100) / 100} sec`);

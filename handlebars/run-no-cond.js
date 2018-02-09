@@ -18,6 +18,10 @@ const partialFiles = glob.sync('**/*.hbs', {cwd: partialsDir});
 
 // Prep cleanup.
 fs.readdirSync(buildDir).forEach((file) => {
+  if (file.charAt(0) === '.') {
+    return;
+  }
+
   fs.unlinkSync(`${buildDir}/${file}`);
 });
 
@@ -37,7 +41,6 @@ const sourceFiles = glob.sync('**/*.hbs', {cwd: sourceDir});
 
 for (let file of sourceFiles) {
   const basename = path.basename(file, '.hbs');
-  const targetTag = `${basename}--element`;
   const sourceText = fs.readFileSync(path.resolve(sourceDir, file), enc);
   const template = handlebars.compile(sourceText);
   const buildText = template(data);
@@ -45,8 +48,8 @@ for (let file of sourceFiles) {
   fs.writeFileSync(`build/${basename}.txt`, buildText);
 }
 
-const end = Date.now();
-const elapsed = (end - start) / 1000;
+const stop = Date.now();
+const elapsed = (stop - start) / 1000;
 const used = process.memoryUsage().heapUsed / 1024 / 1024;
 
 console.log(`Time elapsed: ${Math.round(elapsed * 100) / 100} sec`);
