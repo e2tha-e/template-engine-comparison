@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "feplet": "~0.0.2",
+    "feplet": "^0.1.0",
     "glob": "^7.1.2",
     "handlebars": "^4.0.11"
   }
