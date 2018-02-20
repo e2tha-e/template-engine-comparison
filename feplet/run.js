@@ -32,8 +32,6 @@ const dataOptions = {
   '04-page~~element': [{content: 'amet'}]
 };
 
-const contextKeysArr = Feplet.preprocessContextKeys(dataOptions);
-
 let partials = {};
 let partialsComp = {};
 
