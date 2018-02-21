@@ -1,0 +1,5 @@
+{{> 03-templates/00-template.fpt(01-page: true) }}
+{{> 03-templates/01-template.fpt(01-page: true) }}
+{{> 03-templates/02-template.fpt(01-page: true) }}
+{{> 03-templates/03-template.fpt(01-page: true) }}
+{{> 03-templates/04-template.fpt(01-page: true) }}

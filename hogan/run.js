@@ -7,7 +7,7 @@ process.chdir(__dirname);
 const fs = require('fs');
 const path = require('path');
 
-const hogan = require('./hogan.js/lib/hogan.js');
+const hogan = require('hogan.js');
 const glob = require('glob');
 
 const enc = 'utf8';

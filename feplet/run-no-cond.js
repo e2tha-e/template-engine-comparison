@@ -12,8 +12,6 @@ const glob = require('glob');
 
 const enc = 'utf8';
 const buildDir = 'build';
-const partials = {};
-const partialsComp = {};
 const partialsDir = 'partials-no-cond';
 const partialFiles = glob.sync('**/*.fpt', {cwd: partialsDir});
 
@@ -34,6 +32,8 @@ const data = {
   amet: 'amet'
 };
 
+let partials;
+let partialsComp;
 let start1;
 let stop1;
 let elapsed1;
