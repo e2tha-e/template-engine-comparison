@@ -34,11 +34,6 @@ const data = {
 
 let partials;
 let partialsComp;
-let start1;
-let stop1;
-let elapsed1;
-
-start1 = Date.now();
 
 for (let file of partialFiles) {
   ({
@@ -47,14 +42,8 @@ for (let file of partialFiles) {
   } = Feplet.registerPartial(file, fs.readFileSync(path.resolve(partialsDir, file), enc), null, partials, partialsComp));
 }
 
-stop1 = Date.now();
-elapsed1 = stop1 - start1;
-console.log(`Time elapsed registering partials: ${elapsed1} ms`);
-
 const sourceDir = 'source-no-cond';
 const sourceFiles = glob.sync('**/*.fpt', {cwd: sourceDir});
-
-start1 = Date.now();
 
 for (let file of sourceFiles) {
   const basename = path.basename(file, '.fpt');
@@ -68,10 +57,6 @@ for (let file of sourceFiles) {
 
   fs.writeFileSync(`build/${basename}.txt`, buildText);
 }
-
-stop1 = Date.now();
-elapsed1 = stop1 - start1;
-console.log(`Time elapsed rendering pages: ${elapsed1} ms`);
 
 const stop = Date.now();
 const elapsed = (stop - start) / 1000;

@@ -12,9 +12,8 @@ const glob = require('glob');
 
 const enc = 'utf8';
 const buildDir = 'build';
-const partials = {};
 const partialsDir = 'partials';
-const partialFiles = glob.sync('**/*.fpt', {cwd: partialsDir});
+const partialFiles = glob.sync('**/*.hgn', {cwd: partialsDir});
 
 // Prep cleanup.
 fs.readdirSync(buildDir).forEach((file) => {
@@ -25,10 +24,6 @@ fs.readdirSync(buildDir).forEach((file) => {
   fs.unlinkSync(`${buildDir}/${file}`);
 });
 
-for (let file of partialFiles) {
-  partials[file] = fs.readFileSync(path.resolve(partialsDir, file), enc);
-}
-
 const data = {
   lorem: 'lorem',
   ipsum: 'ipsum',
@@ -36,11 +31,17 @@ const data = {
   sit: 'sit',
   amet: 'amet'
 };
+const partials = {};
+
+for (let file of partialFiles) {
+  partials[file] = fs.readFileSync(path.resolve(partialsDir, file), enc);
+}
+
 const sourceDir = 'source';
-const sourceFiles = glob.sync('**/*.fpt', {cwd: sourceDir});
+const sourceFiles = glob.sync('**/*.hgn', {cwd: sourceDir});
 
 for (let file of sourceFiles) {
-  const basename = path.basename(file, '.fpt');
+  const basename = path.basename(file, '.hgn');
   const sourceText = fs.readFileSync(path.resolve(sourceDir, file), enc);
   const template = hogan.compile(sourceText);
   const buildText = template.render(
