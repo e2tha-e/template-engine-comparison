@@ -1,8 +1,10 @@
 # Template Engine Comparison
 
-This currently only compares Feplet to Handlebars. More template engines can be 
-considered for comparison, so please make suggestions. They need to accomplish 
-the following at a minimum:
+This currently only compares 
+<a href="https://github.com/electric-eloquence/feplet#readme" target="_blank">Feplet</a> 
+to Handlebars. More template engines can be considered, so please 
+<a href="https://github.com/e2tha-e/template-engine-comparison/issues" target="_blank">make suggestions</a>. 
+They need to accomplish the following at a minimum:
 
 * Render tags that are nested within tags flagging boolean conditions
 * Render tags that are nested within tags that loop through arrays of data
@@ -28,8 +30,10 @@ Of course, there's more to Mustache than just that, but the bells and whistles
 do not significantly weigh or slow Mustache down.
 
 If a simpler set of rules, and a syntax to implement those rules, has been 
-invented, please comment on what that is. In the meantime, Mustache will not be 
-abandoned.
+invented, 
+<a href="https://github.com/e2tha-e/template-engine-comparison/issues" target="_blank">
+please comment on what that is</a>. 
+In the meantime, Feplet will not abandon Mustache.
 
 ### Versions
 
