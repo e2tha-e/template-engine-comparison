@@ -4,20 +4,21 @@ This currently only compares
 <a href="https://github.com/electric-eloquence/feplet#readme" target="_blank">Feplet</a> 
 to Handlebars. More template engines can be considered, so please 
 <a href="https://github.com/electric-eloquence/template-engine-comparison/issues" target="_blank">make suggestions</a>. 
-They need to accomplish the following at a minimum:
+They need to meet the following criteria at a minimum:
 
-* Render tags that are nested within tags flagging boolean conditions
+* Render tags that are nested within tags flagging true boolean conditions
 * Render tags that are nested within tags that loop through arrays of data
 * Compile partials with data passed to them by parameters from the including tag
+* Be written in JavaScript
 
 ### Some Background
 
 Feplet aims to extend Mustache, but without changing the existing syntax. 
 In other words, Mustache code can be dropped into Feplet without modification. 
 The extending functionality resembles other, more powerful engines, but as of 
-this writing, no suggestion has been made for an engine that can accept 
-Mustache code without modification, and extend it with the ability to submit 
-data parameters to partials.
+this writing, no suggestion has been made for a JavaScript template engine that 
+can accept Mustache code without modification, and extend it with the ability to 
+submit data parameters to partials.
 
 ### Why Not Abandon Mustache?
 
