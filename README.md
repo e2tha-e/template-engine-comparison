@@ -72,7 +72,7 @@ that keeps execution finite.
 A fourth test consists of just downward inclusions, with no conditional logic. 
 There are twenty patterns per pattern type in this test.
 
-### Hardware
+### System
 
 * MacBook Pro (Retina, 15-inch, Mid 2015)
 * Intel Core i7-4980HQ @ 2.80GHz
