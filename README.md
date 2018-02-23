@@ -3,7 +3,7 @@
 This currently only compares 
 <a href="https://github.com/electric-eloquence/feplet#readme" target="_blank">Feplet</a> 
 to Handlebars. More template engines can be considered, so please 
-<a href="https://github.com/e2tha-e/template-engine-comparison/issues" target="_blank">make suggestions</a>. 
+<a href="https://github.com/electric-eloquence/template-engine-comparison/issues" target="_blank">make suggestions</a>. 
 They need to accomplish the following at a minimum:
 
 * Render tags that are nested within tags flagging boolean conditions
@@ -29,9 +29,9 @@ been drilled down to a printable value, print that value.
 Of course, there's more to Mustache than just that, but the bells and whistles 
 do not significantly weigh or slow Mustache down.
 
-If a simpler set of rules, and a syntax to implement those rules, has been 
+If a simpler set of rules (and a syntax to implement those rules) has been 
 invented, 
-<a href="https://github.com/e2tha-e/template-engine-comparison/issues" target="_blank">
+<a href="https://github.com/electric-eloquence/template-engine-comparison/issues" target="_blank"> 
 please comment on what that is</a>. 
 In the meantime, Feplet will not abandon Mustache.
 
@@ -103,3 +103,15 @@ Averages of ten runs:
 * Handlebars: 0.579 sec
 
 ### Do It Yourself
+
+```bash
+$ npm install
+$ node feplet/run-5.js
+$ node handlebars/run-5.js
+$ node feplet/run-6.js
+$ node handlebars/run-6.js
+$ node feplet/run-7.js
+$ node handlebars/run-7.js
+$ node feplet/run-no-cond.js
+$ node handlebars/run-no-cond.js
+```
