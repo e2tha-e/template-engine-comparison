@@ -11,7 +11,7 @@ They need to meet the following criteria at a minimum:
 * Compile partials with data passed to them by parameters from the including tag
 * Be written in JavaScript
 
-### Some Background
+### Background
 
 Feplet aims to extend Mustache, but without changing the existing syntax. 
 In other words, Mustache code can be dropped into Feplet without modification. 
@@ -43,6 +43,13 @@ The latest as of this writing, February, 2018:
 * Feplet: 0.1.1
 * Handlebars: 4.0.11
 
+### System
+
+* MacBook Pro (Retina, 15-inch, Mid 2015)
+* Intel Core i7-4980HQ @ 2.80GHz
+* 16 GB 1600 MHz DDR3
+* macOS Sierra 10.12.6
+
 ### Bundle Sizes
 
 The minified all-in-one scripts for browser consumption:
@@ -72,13 +79,6 @@ that keeps execution finite.
 A fourth test consists of just downward inclusions, with no conditional logic. 
 There are twenty patterns per pattern type in this test.
 
-### System
-
-* MacBook Pro (Retina, 15-inch, Mid 2015)
-* Intel Core i7-4980HQ @ 2.80GHz
-* 16 GB 1600 MHz DDR3
-* macOS Sierra 10.12.6
-
 ### Benchmarks
 
 Averages of ten runs:
@@ -106,13 +106,13 @@ Averages of ten runs:
 ### Do It Yourself
 
 ```bash
-$ npm install
-$ node feplet/run-5.js
-$ node handlebars/run-5.js
-$ node feplet/run-6.js
-$ node handlebars/run-6.js
-$ node feplet/run-7.js
-$ node handlebars/run-7.js
-$ node feplet/run-no-cond.js
-$ node handlebars/run-no-cond.js
+npm install
+node feplet/run-5.js
+node handlebars/run-5.js
+node feplet/run-6.js
+node handlebars/run-6.js
+node feplet/run-7.js
+node handlebars/run-7.js
+node feplet/run-no-cond.js
+node handlebars/run-no-cond.js
 ```
