@@ -1,9 +1,9 @@
-# Template Engine Comparison
+# Template Engine Benchoff
 
 This currently only compares 
 <a href="https://github.com/electric-eloquence/feplet#readme" target="_blank">Feplet</a> 
 to Handlebars. More template engines can be considered, so please 
-<a href="https://github.com/electric-eloquence/template-engine-comparison/issues" target="_blank">make suggestions</a>. 
+<a href="https://github.com/electric-eloquence/template-engine-benchoff/issues" target="_blank">make suggestions</a>. 
 They need to meet the following criteria at a minimum:
 
 * Render tags that are nested within tags flagging true boolean conditions
@@ -32,7 +32,7 @@ do not significantly weigh or slow Mustache down.
 
 If a simpler set of rules (and a syntax to implement those rules) has been 
 invented, 
-<a href="https://github.com/electric-eloquence/template-engine-comparison/issues" target="_blank"> 
+<a href="https://github.com/electric-eloquence/template-engine-benchoff/issues" target="_blank"> 
 please comment on what that is</a>. 
 In the meantime, Feplet will not abandon Mustache.
 
@@ -116,3 +116,5 @@ node handlebars/run-7.js
 node feplet/run-no-cond.js
 node handlebars/run-no-cond.js
 ```
+
+<h4><a href="https://github.com/electric-eloquence/feplet-vs-patternlab-php" target="_blank">Feplet vs. Pattern Lab for PHP &raquo;</a></h4>
