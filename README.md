@@ -1,7 +1,7 @@
 # Template Engine Benchoff
 
 This currently only compares 
-<a href="https://github.com/electric-eloquence/feplet#readme" target="_blank">Feplet</a> 
+<a href="https://github.com/electric-eloquence/feplet" target="_blank">Feplet</a> 
 to Handlebars. More template engines can be considered, so please 
 <a href="https://github.com/electric-eloquence/template-engine-benchoff/issues" target="_blank">make suggestions</a>. 
 They need to meet the following criteria at a minimum:
@@ -40,7 +40,7 @@ In the meantime, Feplet will not abandon Mustache.
 
 The latest as of this writing, February, 2018:
 
-* Feplet: 0.1.1
+* Feplet: 0.1.2
 * Handlebars: 4.0.11
 
 ### System

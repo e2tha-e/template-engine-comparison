@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "feplet": "^0.1.0",
+    "feplet": "^0.1.2",
     "glob": "^7.1.2",
     "handlebars": "^4.0.11",
     "hogan.js": "^3.0.2"
