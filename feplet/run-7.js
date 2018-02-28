@@ -25,13 +25,13 @@ fs.readdirSync(buildDir).forEach((file) => {
 });
 
 const dataOptions = {
-  '00-page~~element': [{content: 'lorem'}],
-  '01-page~~element': [{content: 'ipsum'}],
-  '02-page~~element': [{content: 'dolor'}],
-  '03-page~~element': [{content: 'sit'}],
-  '04-page~~element': [{content: 'amet'}],
-  '05-page~~element': [{content: 'consectetur'}],
-  '06-page~~element': [{content: 'adipisicing'}]
+  '00-page~~element?': [{content: 'lorem'}],
+  '01-page~~element?': [{content: 'ipsum'}],
+  '02-page~~element?': [{content: 'dolor'}],
+  '03-page~~element?': [{content: 'sit'}],
+  '04-page~~element?': [{content: 'amet'}],
+  '05-page~~element?': [{content: 'consectetur'}],
+  '06-page~~element?': [{content: 'adipisicing'}]
 };
 
 let partials = {};
@@ -49,7 +49,7 @@ const sourceFiles = glob.sync('**/*.fpt', {cwd: sourceDir});
 
 for (let file of sourceFiles) {
   const basename = path.basename(file, '.fpt');
-  const targetTag = `${basename}~~element`;
+  const targetTag = `${basename}~~element?`;
   const sourceText = fs.readFileSync(path.resolve(sourceDir, file), enc);
   const data = {};
 
