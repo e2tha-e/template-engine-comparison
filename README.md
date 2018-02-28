@@ -6,10 +6,11 @@ to Handlebars. More template engines can be considered, so please
 <a href="https://github.com/electric-eloquence/template-engine-benchoff/issues" target="_blank">make suggestions</a>. 
 They need to meet the following criteria at a minimum:
 
-* Render tags that are nested within tags flagging true boolean conditions
-* Render tags that are nested within tags that loop through arrays of data
-* Compile partials with data passed to them by parameters from the including tag
-* Be written in JavaScript
+* Render tags that are nested within tags flagging true boolean conditions.
+* Render tags that are nested within tags that loop through arrays of data.
+* Compile partials with data passed to them by parameters from the including
+  tag.
+* Be written in JavaScript.
 
 ### Background
 
