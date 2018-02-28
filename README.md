@@ -13,9 +13,9 @@ They need to meet the following criteria at a minimum:
 
 ### Background
 
-Feplet aims to extend Mustache, but without changing the existing syntax. 
-In other words, Mustache code can be dropped into Feplet without modification. 
-The extending functionality resembles other, more powerful engines, but as of 
+Feplet aims to extend Mustache, but without changing the existing syntax. In 
+other words, Mustache code can be dropped into Feplet without modification. The 
+extending functionality resembles other, more feature-rich engines, but as of 
 this writing, no suggestion has been made for a JavaScript template engine that 
 can accept Mustache code without modification, and extend it with the ability to 
 submit data parameters to partials.
