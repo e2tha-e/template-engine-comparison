@@ -25,7 +25,7 @@ submit data parameters to partials.
 
 Mustache brands itself as being "logic-less," but it in fact more closely 
 resembles pure formal logic. It tests the most basic conditions: Is a value 
-truthy or falsy? Is a value a set containing members? When true conditions have 
+truthy or falsey? Is a value a set containing members? When true conditions have 
 been drilled down to a printable value, print that value.
 
 Of course, there's more to Mustache than just that, but the bells and whistles 
