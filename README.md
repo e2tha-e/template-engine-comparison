@@ -106,7 +106,7 @@ Averages of ten runs:
 
 ### Do It Yourself
 
-```bash
+```shell
 npm install
 node feplet/run-5.js
 node handlebars/run-5.js
