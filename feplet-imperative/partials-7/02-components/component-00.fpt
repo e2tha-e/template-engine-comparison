@@ -1,0 +1,265 @@
+{{# page-00? }}
+  {{> 01-compounds/compound-00.fpt("page-00?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-00?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-00?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-00?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-00?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-00?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-00?": true) }}
+
+  {{> 03-templates/template-00.fpt("page-00~~template?": true) }}
+  {{> 03-templates/template-01.fpt("page-00~~template?": true) }}
+  {{> 03-templates/template-02.fpt("page-00~~template?": true) }}
+  {{> 03-templates/template-03.fpt("page-00~~template?": true) }}
+  {{> 03-templates/template-04.fpt("page-00~~template?": true) }}
+  {{> 03-templates/template-05.fpt("page-00~~template?": true) }}
+  {{> 03-templates/template-06.fpt("page-00~~template?": true) }}
+{{/ page-00? }}
+
+{{# page-00~~template? }}
+  {{> 01-compounds/compound-00.fpt("page-00~~template?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-00~~template?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-00~~template?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-00~~template?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-00~~template?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-00~~template?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-00~~template?": true) }}
+{{/ page-00~~template? }}
+
+{{# page-00~~component? }}
+  {{> 01-compounds/compound-00.fpt("page-00~~component?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-00~~component?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-00~~component?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-00~~component?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-00~~component?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-00~~component?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-00~~component?": true) }}
+{{/ page-00~~component? }}
+
+{{# page-01? }}
+  {{> 01-compounds/compound-00.fpt("page-01?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-01?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-01?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-01?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-01?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-01?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-01?": true) }}
+
+  {{> 03-templates/template-00.fpt("page-01~~template?": true) }}
+  {{> 03-templates/template-01.fpt("page-01~~template?": true) }}
+  {{> 03-templates/template-02.fpt("page-01~~template?": true) }}
+  {{> 03-templates/template-03.fpt("page-01~~template?": true) }}
+  {{> 03-templates/template-04.fpt("page-01~~template?": true) }}
+  {{> 03-templates/template-05.fpt("page-01~~template?": true) }}
+  {{> 03-templates/template-06.fpt("page-01~~template?": true) }}
+{{/ page-01? }}
+
+{{# page-01~~template? }}
+  {{> 01-compounds/compound-00.fpt("page-01~~template?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-01~~template?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-01~~template?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-01~~template?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-01~~template?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-01~~template?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-01~~template?": true) }}
+{{/ page-01~~template? }}
+
+{{# page-01~~component? }}
+  {{> 01-compounds/compound-00.fpt("page-01~~component?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-01~~component?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-01~~component?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-01~~component?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-01~~component?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-01~~component?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-01~~component?": true) }}
+{{/ page-01~~component? }}
+
+{{# page-02? }}
+  {{> 01-compounds/compound-00.fpt("page-02?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-02?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-02?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-02?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-02?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-02?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-02?": true) }}
+
+  {{> 03-templates/template-00.fpt("page-02~~template?": true) }}
+  {{> 03-templates/template-01.fpt("page-02~~template?": true) }}
+  {{> 03-templates/template-02.fpt("page-02~~template?": true) }}
+  {{> 03-templates/template-03.fpt("page-02~~template?": true) }}
+  {{> 03-templates/template-04.fpt("page-02~~template?": true) }}
+  {{> 03-templates/template-05.fpt("page-02~~template?": true) }}
+  {{> 03-templates/template-06.fpt("page-02~~template?": true) }}
+{{/ page-02? }}
+
+{{# page-02~~template? }}
+  {{> 01-compounds/compound-00.fpt("page-02~~template?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-02~~template?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-02~~template?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-02~~template?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-02~~template?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-02~~template?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-02~~template?": true) }}
+{{/ page-02~~template? }}
+
+{{# page-02~~component? }}
+  {{> 01-compounds/compound-00.fpt("page-02~~component?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-02~~component?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-02~~component?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-02~~component?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-02~~component?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-02~~component?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-02~~component?": true) }}
+{{/ page-02~~component? }}
+
+{{# page-03? }}
+  {{> 01-compounds/compound-00.fpt("page-03?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-03?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-03?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-03?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-03?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-03?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-03?": true) }}
+
+  {{> 03-templates/template-00.fpt("page-03~~template?": true) }}
+  {{> 03-templates/template-01.fpt("page-03~~template?": true) }}
+  {{> 03-templates/template-02.fpt("page-03~~template?": true) }}
+  {{> 03-templates/template-03.fpt("page-03~~template?": true) }}
+  {{> 03-templates/template-04.fpt("page-03~~template?": true) }}
+  {{> 03-templates/template-05.fpt("page-03~~template?": true) }}
+  {{> 03-templates/template-06.fpt("page-03~~template?": true) }}
+{{/ page-03? }}
+
+{{# page-03~~template? }}
+  {{> 01-compounds/compound-00.fpt("page-03~~template?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-03~~template?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-03~~template?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-03~~template?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-03~~template?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-03~~template?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-03~~template?": true) }}
+{{/ page-03~~template? }}
+
+{{# page-03~~component? }}
+  {{> 01-compounds/compound-00.fpt("page-03~~component?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-03~~component?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-03~~component?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-03~~component?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-03~~component?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-03~~component?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-03~~component?": true) }}
+{{/ page-03~~component? }}
+
+{{# page-04? }}
+  {{> 01-compounds/compound-00.fpt("page-04?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-04?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-04?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-04?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-04?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-04?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-04?": true) }}
+
+  {{> 03-templates/template-00.fpt("page-04~~template?": true) }}
+  {{> 03-templates/template-01.fpt("page-04~~template?": true) }}
+  {{> 03-templates/template-02.fpt("page-04~~template?": true) }}
+  {{> 03-templates/template-03.fpt("page-04~~template?": true) }}
+  {{> 03-templates/template-04.fpt("page-04~~template?": true) }}
+  {{> 03-templates/template-05.fpt("page-04~~template?": true) }}
+  {{> 03-templates/template-06.fpt("page-04~~template?": true) }}
+{{/ page-04? }}
+
+{{# page-04~~template? }}
+  {{> 01-compounds/compound-00.fpt("page-04~~template?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-04~~template?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-04~~template?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-04~~template?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-04~~template?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-04~~template?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-04~~template?": true) }}
+{{/ page-04~~template? }}
+
+{{# page-04~~component? }}
+  {{> 01-compounds/compound-00.fpt("page-04~~component?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-04~~component?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-04~~component?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-04~~component?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-04~~component?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-04~~component?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-04~~component?": true) }}
+{{/ page-04~~component? }}
+
+{{# page-05? }}
+  {{> 01-compounds/compound-00.fpt("page-05?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-05?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-05?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-05?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-05?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-05?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-05?": true) }}
+
+  {{> 03-templates/template-00.fpt("page-05~~template?": true) }}
+  {{> 03-templates/template-01.fpt("page-05~~template?": true) }}
+  {{> 03-templates/template-02.fpt("page-05~~template?": true) }}
+  {{> 03-templates/template-03.fpt("page-05~~template?": true) }}
+  {{> 03-templates/template-04.fpt("page-05~~template?": true) }}
+  {{> 03-templates/template-05.fpt("page-05~~template?": true) }}
+  {{> 03-templates/template-06.fpt("page-05~~template?": true) }}
+{{/ page-05? }}
+
+{{# page-05~~template? }}
+  {{> 01-compounds/compound-00.fpt("page-05~~template?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-05~~template?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-05~~template?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-05~~template?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-05~~template?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-05~~template?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-05~~template?": true) }}
+{{/ page-05~~template? }}
+
+{{# page-05~~component? }}
+  {{> 01-compounds/compound-00.fpt("page-05~~component?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-05~~component?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-05~~component?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-05~~component?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-05~~component?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-05~~component?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-05~~component?": true) }}
+{{/ page-05~~component? }}
+
+{{# page-06? }}
+  {{> 01-compounds/compound-00.fpt("page-06?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-06?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-06?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-06?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-06?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-06?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-06?": true) }}
+
+  {{> 03-templates/template-00.fpt("page-06~~template?": true) }}
+  {{> 03-templates/template-01.fpt("page-06~~template?": true) }}
+  {{> 03-templates/template-02.fpt("page-06~~template?": true) }}
+  {{> 03-templates/template-03.fpt("page-06~~template?": true) }}
+  {{> 03-templates/template-04.fpt("page-06~~template?": true) }}
+  {{> 03-templates/template-05.fpt("page-06~~template?": true) }}
+  {{> 03-templates/template-06.fpt("page-06~~template?": true) }}
+{{/ page-06? }}
+
+{{# page-06~~template? }}
+  {{> 01-compounds/compound-00.fpt("page-06~~template?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-06~~template?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-06~~template?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-06~~template?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-06~~template?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-06~~template?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-06~~template?": true) }}
+{{/ page-06~~template? }}
+
+{{# page-06~~component? }}
+  {{> 01-compounds/compound-00.fpt("page-06~~component?": true) }}
+  {{> 01-compounds/compound-01.fpt("page-06~~component?": true) }}
+  {{> 01-compounds/compound-02.fpt("page-06~~component?": true) }}
+  {{> 01-compounds/compound-03.fpt("page-06~~component?": true) }}
+  {{> 01-compounds/compound-04.fpt("page-06~~component?": true) }}
+  {{> 01-compounds/compound-05.fpt("page-06~~component?": true) }}
+  {{> 01-compounds/compound-06.fpt("page-06~~component?": true) }}
+{{/ page-06~~component? }}

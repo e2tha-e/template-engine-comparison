@@ -1,0 +1,7 @@
+{{> 03-templates/template-00.fpt("page-02?": true) }}
+{{> 03-templates/template-01.fpt("page-02?": true) }}
+{{> 03-templates/template-02.fpt("page-02?": true) }}
+{{> 03-templates/template-03.fpt("page-02?": true) }}
+{{> 03-templates/template-04.fpt("page-02?": true) }}
+{{> 03-templates/template-05.fpt("page-02?": true) }}
+{{> 03-templates/template-06.fpt("page-02?": true) }}

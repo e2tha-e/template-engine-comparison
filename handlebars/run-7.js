@@ -30,13 +30,13 @@ for (let file of partialFiles) {
 }
 
 const dataOptions = {
-  '00-page--element': [{content: 'lorem'}],
-  '01-page--element': [{content: 'ipsum'}],
-  '02-page--element': [{content: 'dolor'}],
-  '03-page--element': [{content: 'sit'}],
-  '04-page--element': [{content: 'amet'}],
-  '05-page--element': [{content: 'consectetur'}],
-  '06-page--element': [{content: 'adipisicing'}]
+  'page-00--element': [{content: 'lorem'}],
+  'page-01--element': [{content: 'ipsum'}],
+  'page-02--element': [{content: 'dolor'}],
+  'page-03--element': [{content: 'sit'}],
+  'page-04--element': [{content: 'amet'}],
+  'page-05--element': [{content: 'consectetur'}],
+  'page-06--element': [{content: 'adipisicing'}]
 };
 const sourceDir = 'source-7';
 const sourceFiles = glob.sync('**/*.hbs', {cwd: sourceDir});

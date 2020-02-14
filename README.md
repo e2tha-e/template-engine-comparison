@@ -39,24 +39,26 @@ In the meantime, Feplet will not abandon Mustache.
 
 ### Versions
 
-The latest as of this writing, February, 2018:
+The latest as of this writing, 2020 February:
 
-* Feplet: 0.1.2
-* Handlebars: 4.0.11
+* Feplet: 1.2.0
+* Handlebars: 4.7.3
 
 ### System
 
 * MacBook Pro (Retina, 15-inch, Mid 2015)
 * Intel Core i7-4980HQ @ 2.80GHz
 * 16 GB 1600 MHz DDR3
-* macOS Sierra 10.12.6
+* macOS Catalina 10.15.3 Host OS
+* VirtualBox 6.1.2 r135662
+* Ubuntu 18.04.3 LTS Bionic Guest OS
 
 ### Bundle Sizes
 
 The minified all-in-one scripts for browser consumption:
 
-* Feplet: 22K
-* Handlebars: 74K
+* Feplet: 24K
+* Handlebars: 78K
 
 ### Tests
 
@@ -69,53 +71,39 @@ The engines need to compile and render patterns grouped within 5 pattern types:
 * elements
 
 The engines start reading from within the `pages` type, and recursively include 
-partials from each successive pattern type. The first test has five patterns per 
-pattern type. The second test has six. The third test has seven. These tests 
-don't just include partials from top down. There are some blocks which include 
-partials from pattern types higher up, which in turn continue the downward 
-course of inclusion. Without parameterized logic, this circular path would 
-result in infinite loops. The engines correctly submit and process the logic 
-that keeps execution finite.
-
-A fourth test consists of just downward inclusions, with no conditional logic. 
-There are twenty patterns per pattern type in this test.
+partials from each successive pattern type. The first test has seven patterns 
+per pattern type. The second test has eight. These tests don't just include 
+partials from top down. There are some blocks which include partials from 
+pattern types higher up, which in turn continue the downward course of 
+inclusion. Parameterized logic pervents these circular execution paths from 
+being infinite.
 
 ### Benchmarks
 
 Averages of ten runs:
 
-#### 5 patterns per pattern type
-
-* Feplet: 0.575 sec
-* Handlebars: 1.272 sec
-
 #### 6 patterns per pattern type
 
-* Feplet: 1.541 sec
-* Handlebars: 3.793 sec
+* Feplet: 1.564 sec, 28.61 MB
+* Feplet imperative: 1.58 sec, 28.371 MB
+* Handlebars: 6.136 sec, 21.579 MB
 
 #### 7 patterns per pattern type
 
-* Feplet: 4.044 sec
-* Handlebars: 10.734 sec
-
-#### No conditional logic
-
-* Feplet: 0.437 sec
-* Handlebars: 0.579 sec
+* Feplet: 3.927 sec, 36.981 MB
+* Feplet imperative: 3.908 sec, 37.167 MB
+* Handlebars: 20.349 sec, 45.749 MB
 
 ### Do It Yourself
 
 ```shell
 npm install
-node feplet/run-5.js
-node handlebars/run-5.js
 node feplet/run-6.js
+node feplet-imperative/run-6.js
 node handlebars/run-6.js
 node feplet/run-7.js
+node feplet-imperative/run-7.js
 node handlebars/run-7.js
-node feplet/run-no-cond.js
-node handlebars/run-no-cond.js
 ```
 
 ### Also

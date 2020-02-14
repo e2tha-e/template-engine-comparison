@@ -1,0 +1,265 @@
+{{# page-00? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+
+  {{> 02-components/component-00.fpt("page-00~~component?": true) }}
+  {{> 02-components/component-01.fpt("page-00~~component?": true) }}
+  {{> 02-components/component-02.fpt("page-00~~component?": true) }}
+  {{> 02-components/component-03.fpt("page-00~~component?": true) }}
+  {{> 02-components/component-04.fpt("page-00~~component?": true) }}
+  {{> 02-components/component-05.fpt("page-00~~component?": true) }}
+  {{> 02-components/component-06.fpt("page-00~~component?": true) }}
+{{/ page-00? }}
+
+{{# page-00~~template? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-00~~template? }}
+
+{{# page-00~~component? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-00~~component? }}
+
+{{# page-01? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+
+  {{> 02-components/component-00.fpt("page-01~~component?": true) }}
+  {{> 02-components/component-01.fpt("page-01~~component?": true) }}
+  {{> 02-components/component-02.fpt("page-01~~component?": true) }}
+  {{> 02-components/component-03.fpt("page-01~~component?": true) }}
+  {{> 02-components/component-04.fpt("page-01~~component?": true) }}
+  {{> 02-components/component-05.fpt("page-01~~component?": true) }}
+  {{> 02-components/component-06.fpt("page-01~~component?": true) }}
+{{/ page-01? }}
+
+{{# page-01~~template? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-01~~template? }}
+
+{{# page-01~~component? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-01~~component? }}
+
+{{# page-02? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+
+  {{> 02-components/component-00.fpt("page-02~~component?": true) }}
+  {{> 02-components/component-01.fpt("page-02~~component?": true) }}
+  {{> 02-components/component-02.fpt("page-02~~component?": true) }}
+  {{> 02-components/component-03.fpt("page-02~~component?": true) }}
+  {{> 02-components/component-04.fpt("page-02~~component?": true) }}
+  {{> 02-components/component-05.fpt("page-02~~component?": true) }}
+  {{> 02-components/component-06.fpt("page-02~~component?": true) }}
+{{/ page-02? }}
+
+{{# page-02~~template? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-02~~template? }}
+
+{{# page-02~~component? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-02~~component? }}
+
+{{# page-03? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+
+  {{> 02-components/component-00.fpt("page-03~~component?": true) }}
+  {{> 02-components/component-01.fpt("page-03~~component?": true) }}
+  {{> 02-components/component-02.fpt("page-03~~component?": true) }}
+  {{> 02-components/component-03.fpt("page-03~~component?": true) }}
+  {{> 02-components/component-04.fpt("page-03~~component?": true) }}
+  {{> 02-components/component-05.fpt("page-03~~component?": true) }}
+  {{> 02-components/component-06.fpt("page-03~~component?": true) }}
+{{/ page-03? }}
+
+{{# page-03~~template? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-03~~template? }}
+
+{{# page-03~~component? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-03~~component? }}
+
+{{# page-04? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+
+  {{> 02-components/component-00.fpt("page-04~~component?": true) }}
+  {{> 02-components/component-01.fpt("page-04~~component?": true) }}
+  {{> 02-components/component-02.fpt("page-04~~component?": true) }}
+  {{> 02-components/component-03.fpt("page-04~~component?": true) }}
+  {{> 02-components/component-04.fpt("page-04~~component?": true) }}
+  {{> 02-components/component-05.fpt("page-04~~component?": true) }}
+  {{> 02-components/component-06.fpt("page-04~~component?": true) }}
+{{/ page-04? }}
+
+{{# page-04~~template? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-04~~template? }}
+
+{{# page-04~~component? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-04~~component? }}
+
+{{# page-05? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+
+  {{> 02-components/component-00.fpt("page-05~~component?": true) }}
+  {{> 02-components/component-01.fpt("page-05~~component?": true) }}
+  {{> 02-components/component-02.fpt("page-05~~component?": true) }}
+  {{> 02-components/component-03.fpt("page-05~~component?": true) }}
+  {{> 02-components/component-04.fpt("page-05~~component?": true) }}
+  {{> 02-components/component-05.fpt("page-05~~component?": true) }}
+  {{> 02-components/component-06.fpt("page-05~~component?": true) }}
+{{/ page-05? }}
+
+{{# page-05~~template? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-05~~template? }}
+
+{{# page-05~~component? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-05~~component? }}
+
+{{# page-06? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+
+  {{> 02-components/component-00.fpt("page-06~~component?": true) }}
+  {{> 02-components/component-01.fpt("page-06~~component?": true) }}
+  {{> 02-components/component-02.fpt("page-06~~component?": true) }}
+  {{> 02-components/component-03.fpt("page-06~~component?": true) }}
+  {{> 02-components/component-04.fpt("page-06~~component?": true) }}
+  {{> 02-components/component-05.fpt("page-06~~component?": true) }}
+  {{> 02-components/component-06.fpt("page-06~~component?": true) }}
+{{/ page-06? }}
+
+{{# page-06~~template? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-06~~template? }}
+
+{{# page-06~~component? }}
+  {{> 00-elements/element-00.fpt }}
+  {{> 00-elements/element-01.fpt }}
+  {{> 00-elements/element-02.fpt }}
+  {{> 00-elements/element-03.fpt }}
+  {{> 00-elements/element-04.fpt }}
+  {{> 00-elements/element-05.fpt }}
+  {{> 00-elements/element-06.fpt }}
+{{/ page-06~~component? }}

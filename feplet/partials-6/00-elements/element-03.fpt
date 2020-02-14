@@ -1,0 +1,18 @@
+{{# page-00~~element }}
+  {{ content }}
+{{/ page-00~~element }}
+{{# page-01~~element }}
+  {{ content }}
+{{/ page-01~~element }}
+{{# page-02~~element }}
+  {{ content }}
+{{/ page-02~~element }}
+{{# page-03~~element }}
+  {{ content }}
+{{/ page-03~~element }}
+{{# page-04~~element }}
+  {{ content }}
+{{/ page-04~~element }}
+{{# page-05~~element }}
+  {{ content }}
+{{/ page-05~~element }}
