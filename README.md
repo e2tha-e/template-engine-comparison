@@ -268,4 +268,4 @@ terrible strategy for software engineering!
 
 ### Also
 
-<h4><a href="https://github.com/electric-eloquence/feplet-vs-patternlab-php" target="_blank">Feplet vs. Pattern Lab for PHP &raquo;</a></h4>
+<h4><a href="https://github.com/electric-eloquence/feplet-vs-patternlab-php" target="_blank">Feplet vs. Pattern Lab PHP &raquo;</a></h4>
