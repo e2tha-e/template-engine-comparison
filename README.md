@@ -6,15 +6,15 @@ This repository is primarily being maintained for the purpose of providing a
 test bed on which to benchmark future versions of 
 <a href="https://github.com/electric-eloquence/feplet" target="_blank">Feplet</a>. 
 While it is compared against Handlebars, it is unlikely that anyone will abandon 
-Handlebars on account of performance. The tests herein only benchmark edge 
-cases, and build times of 20 seconds or more will almost never be experienced in 
-production. Even if such cases actually occur, most teams will readily accept 
-those costs, given that Handlebars is widely known, tried and tested, and so 
-forth. Furthermore, very few people actually care whether a functional or 
-imperative programming paradigm is used under the hood of a software package. 
-What is important to both the developers and consumers of Feplet is that the 
-implemented paradigm (functional) does not offer an inferior experience to the 
-alternative (imperative).
+Handlebars on account of performance. The tests herein benchmark edge cases, and 
+build times of 20 seconds or more are unlikely to occur under normal usage. Even 
+if such cases actually occur, most teams will readily accept those costs, given 
+that Handlebars is widely known, tried and tested, and so forth. Furthermore, 
+very few people actually care whether a functional or imperative programming 
+paradigm is used under the hood of a software package. What is important to both 
+the developers and consumers of Feplet is that the implemented paradigm 
+(functional) does not offer an inferior experience to the alternative 
+(imperative).
 
 If the generalizations about public disinterest in this benchoff can be allowed 
 as givens (i.e. not requiring scientific rigor), we'll proceed then with 
