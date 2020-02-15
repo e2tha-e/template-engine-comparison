@@ -232,8 +232,8 @@ var paramsApply = function (args) {
 };
 ```
 
-The big difference between the imperative and functional code examples is that 
-the imperative code employs a for-loop to iteratively invoke 
+A big difference between the imperative and functional code examples is that the 
+imperative code employs a for-loop to iteratively invoke 
 `paramsApplyToParseObj()`, whereas the functional code invokes 
 `paramsApplyToParseObj()` once, wherein it recurses into itself until the 
 `parseObjKeysItr` object's `.next()` method returns a `parseObjKeysItrn` object 
