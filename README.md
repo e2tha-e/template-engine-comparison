@@ -3,16 +3,17 @@
 #### Update: 2020 February
 
 This repository is primarily being maintained for the purpose of providing a 
-test bed on which to benchmark future versions of Feplet. It is compared against 
-Handlebars, but it is unlikely that anyone will abandon Handlebars on account of 
-performance. The tests herein only benchmark edge cases, and build times of 20 
-seconds or more will almost never be experienced in production. Even if such 
-cases actually occur, most teams will readily accept those costs, given that 
-Handlebars is widely known, tried and tested, and so forth. Furthermore, very 
-few people actually care whether a functional or imperative programming paradigm 
-is used under the hood of a software package. What is important to both the 
-developers and consumers of Feplet is that the implemented paradigm (functional) 
-does not offer an inferior experience to the alternative (imperative).
+test bed on which to benchmark future versions of Feplet. While it is compared 
+against Handlebars, it is unlikely that anyone will abandon Handlebars on 
+account of performance. The tests herein only benchmark edge cases, and build 
+times of 20 seconds or more will almost never be experienced in production. Even 
+if such cases actually occur, most teams will readily accept those costs, given 
+that Handlebars is widely known, tried and tested, and so forth. Furthermore, 
+very few people actually care whether a functional or imperative programming 
+paradigm is used under the hood of a software package. What is important to both 
+the developers and consumers of Feplet is that the implemented paradigm 
+(functional) does not offer an inferior experience to the alternative 
+(imperative).
 
 If the generalizations about public disinterest in this benchoff can be allowed 
 as givens (i.e. not requiring scientific rigor), we'll proceed then with 
@@ -36,7 +37,7 @@ the latest fashion of the time, as well as out of genuine curiosity at how
 functional programming would play out in the real world of deadlines and profit 
 margins. In the case of Feplet, functional programming turns out to be more 
 verbose than imperative programming. It isn't the way most people are introduced 
-to programming, so the functional code could also be hard to follow for the 
+to programming, so the functional code could be hard to follow for the 
 uninitiated.
 
 However, the functional paradigm wasn't just tacked on willy-nilly. For Feplet, 
@@ -86,7 +87,7 @@ partials from each successive pattern type. The first test has six patterns per
 pattern type. The second test has seven. These tests don't just include partials 
 from top down. There are some blocks which include partials from pattern types 
 higher up, which in turn continue the downward course of inclusion. 
-Parameterized logic pervents these circular execution paths from being infinite.
+Parameterized logic prevents these circular execution paths from being infinite.
 
 ### Benchmarks
 
@@ -232,7 +233,7 @@ var paramsApply = function (args) {
 
 The big difference between the imperative and functional code examples is that 
 the imperative code employs a for-loop to iteratively invoke 
-`paramsApplyToParseObj()`, whereas the functional code calls 
+`paramsApplyToParseObj()`, whereas the functional code invokes 
 `paramsApplyToParseObj()` once, wherein it recurses into itself until the 
 `parseObjKeysItr` object's `.next()` method returns a `parseObjKeysItrn` object 
 with property `.done` === `true`. While the code to `paramsApplyToParseObj()` is 
@@ -245,7 +246,7 @@ that functional is more verbose than imperative, why choose functional over
 imperative?
 
 Any answer to that is subjective. The package size difference is so small that 
-it is not a compelling reason. Both paradigms can be critized as being hard to 
+it is not a compelling reason. Both paradigms can be criticized as being hard to 
 follow. Functional because it is functional. Imperative because for-loops do 
 nothing but cause side-effects, and they don't explicitly declare which data 
 they mutate. Case in point:
