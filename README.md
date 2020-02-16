@@ -268,6 +268,10 @@ strategy for starring in reality television. It is a good to excellent strategy
 for separating donors, lenders, and buyers from their money. But it is a 
 terrible strategy for software engineering!
 
-### Also
+### Thanks for Visiting!
 
-<h4><a href="https://github.com/electric-eloquence/feplet-vs-patternlab-php#readme" target="_blank">Feplet vs. Pattern Lab PHP &raquo;</a></h4>
+All tools used in this test (with the exception of Apple and Intel products) are 
+Open Source.
+
+Also, please check out <a href="https://github.com/electric-eloquence/feplet-vs-patternlab-php#readme" target="_blank">
+Feplet vs. Pattern Lab PHP</a>.
