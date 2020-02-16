@@ -122,7 +122,7 @@ node handlebars/run-7.js
 
 In the case of Feplet, "functional" could not simply mean 
 "`map().filter().reduce()`", repeat. It also could not mandate that data 
-structures, like arrays and plain objects, be treated as atomic pieces of 
+structures, like arrays and plain objects, be treated as atomic units of 
 immutable data. In Feplet, functions process data, their final forms being 
 immutable, and append them to such data structures. Destroying and 
 reinstantiating data structures any time new data needed to be added, would 
