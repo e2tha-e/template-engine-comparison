@@ -35,11 +35,11 @@ imperative equivalent.
 
 Feplet was initially written in the functional paradigm out of a desire to wear 
 the latest fashion of the time, as well as out of genuine curiosity at how 
-functional programming would play out in the real world of deadlines and profit 
-margins. In the case of Feplet, functional programming turns out to be more 
-verbose than imperative programming. It isn't the way most people are introduced 
-to programming, so the functional code could also be hard to follow for the 
-uninitiated.
+functional programming would play out in the "real world" of deadlines and 
+profit margins. In the case of Feplet, functional programming turns out to be 
+more verbose than imperative programming. It isn't the way most people are 
+introduced to programming, so the functional code could also be hard to follow 
+for the uninitiated.
 
 However, the functional paradigm wasn't just tacked on willy-nilly. For Feplet, 
 recursion was unavoidable since template tags are nestable, and recursion is the 
