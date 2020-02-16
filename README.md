@@ -8,9 +8,9 @@ test bed on which to benchmark future versions of
 While it is compared against Handlebars, it is unlikely that anyone will abandon 
 Handlebars on account of performance. The tests herein benchmark extreme cases, 
 and the resultant build times of 20 seconds or more are unlikely to occur under 
-normal usage. Even if such cases actually occur, most teams will readily accept 
-those costs, given that Handlebars is widely known, tried and tested, and so 
-forth. Furthermore, very few people actually care whether a functional or 
+normal usage. Even if such build times actually occur, most teams will readily 
+accept those costs, given that Handlebars is widely known, tried and tested, and 
+so forth. Furthermore, very few people actually care whether a functional or 
 imperative programming paradigm is used under the hood of a software package. 
 What is important to both the developers and consumers of Feplet is that the 
 implemented paradigm (functional) does not offer an inferior experience to the 
