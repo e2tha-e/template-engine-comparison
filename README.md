@@ -274,4 +274,4 @@ All tools used in this test (with the exception of Apple and Intel products) are
 Open Source.
 
 Also, please check out <a href="https://github.com/electric-eloquence/feplet-vs-patternlab-php#readme" target="_blank">
-Feplet vs. Pattern Lab PHP</a>.
+Feplet vs. Pattern Lab PHP</a>, a similar benchoff.
