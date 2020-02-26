@@ -69,9 +69,9 @@ The latest as of this writing, 2020 February:
 
 The minified all-in-one scripts for browser consumption:
 
-* Feplet: 24K
-* Feplet imperative: 23K
-* Handlebars: 78K
+* Feplet: 24 KB
+* Feplet imperative: 23 KB
+* Handlebars: 78 KB
 
 ### Tests
 
@@ -235,7 +235,7 @@ var paramsApply = function (args) {
 A big difference between the imperative and functional code examples is that the 
 imperative code employs a for-loop to iteratively invoke 
 `paramsApplyToParseObj()`, whereas the functional code invokes 
-`paramsApplyToParseObj()` once, wherein it recurses into itself until the 
+`paramsApplyToParseObj()` wherein it recurses into itself until the 
 `parseObjKeysItr` object's `.next()` method returns a `parseObjKeysItrn` object 
 with property `.done` === `true`. While the code to `paramsApplyToParseObj()` is 
 not shown, it can be inferred that it treats `parseObjKeysItr` and 
