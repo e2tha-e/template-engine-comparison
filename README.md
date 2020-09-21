@@ -120,20 +120,6 @@ node handlebars/run-7.js
 
 ### Imperative vs. Functional
 
-In the case of Feplet, "functional" could not simply mean 
-"`map().filter().reduce()`", repeat. It also could not mandate that data 
-structures, like arrays and plain objects, be treated as atomic units of 
-immutable data. In Feplet, functions process data, their final forms being 
-immutable, and append them to such data structures. Destroying and 
-reinstantiating data structures any time new data needed to be added, would 
-hamper performance for no benefit other than resembling other projects that 
-treat data structures as atomic and immutable. JavaScript projects that destroy 
-and reinstantiate data structures, _actually_ destroy those data structures and 
-reinstantiate them in _actual_ new memory addresses, given that JavaScript is 
-_not_ a purely functional language, and its implementations generally do not 
-optimize functionally programmed instructions the way purely functional 
-languages do.
-
 Imperative Feplet is actually pretty functional, given that it heavily and 
 unavoidably employs recursion. The imperative parts are mostly for-loops. 
 Functional Feplet replaces those for-loops with recursive functions.
@@ -186,61 +172,84 @@ var paramsApply = function (args) {
 var paramsApply = function (args) {
   const {
     contextKeys,
-    delimiterUnicodes_,
     paramKeys,
     paramsObj,
-    partialParseItr,
-    partialParseItrn,
-    partialText_
+    parseObj
+  } = args;
+  let {
+    delimiterUnicodes_,
+    partialText
   } = args;
 
-  if (partialParseItrn.done) {
-    return {
-      delimiterUnicodes: delimiterUnicodes_,
-      partialText: partialText_
-    };
-  }
-
-  const parseObj = partialParseItrn.value;
   const parseObjKeys = Object.keys(parseObj);
   let delimiterUnicodes;
-  let partialText;
 
   if (parseObjKeys.length) {
-    const parseObjKeysItr = parseObjKeys[Symbol.iterator]();
-    const parseObjKeysItrn = parseObjKeysItr.next();
+    const _this = this;
+
     ({
       delimiterUnicodes,
       partialText
-    } = paramsApplyToParseObj({
-      contextKeys,
-      delimiterUnicodes_,
-      paramKeys,
-      paramsObj,
-      parseObj,
-      parseObjKeysItr,
-      parseObjKeysItrn,
-      partialText_
-    }));
+    } = parseObjKeys.reduce(
+      (dataStructures, parseObjKey) => {
+        const {
+          contextKeys,
+          paramKeys,
+          paramsObj,
+          parseObj
+        } = dataStructures;
+        let {
+          delimiterUnicodes,
+          partialText
+        } = dataStructures;
+
+        ({
+          delimiterUnicodes,
+          partialText
+        } = paramsApplyToParseObj.call(
+          _this,
+          {
+            contextKeys,
+            delimiterUnicodes_: delimiterUnicodes,
+            paramKeys,
+            paramsObj,
+            parseObj,
+            parseObjKey,
+            partialText_: partialText
+          }
+        ));
+
+        return {
+          contextKeys,
+          delimiterUnicodes,
+          paramKeys,
+          paramsObj,
+          parseObj,
+          partialText
+        };
+      },
+      {
+        contextKeys,
+        delimiterUnicodes,
+        paramKeys,
+        paramsObj,
+        parseObj,
+        partialText
+      }
+    ));
   }
 
-  args.delimiterUnicodes_ = delimiterUnicodes || delimiterUnicodes_;
-  args.partialParseItrn = partialParseItr.next();
-  args.partialText_ = partialText || partialText_;
-
-  return paramsApply(args);
+  return {
+    delimiterUnicodes: delimiterUnicodes || delimiterUnicodes_,
+    partialText
+  };
 };
 ```
 
-A big difference between the imperative and functional code examples is that the 
-imperative code employs a for-loop to iteratively invoke 
+The main difference between the imperative and functional code examples is that 
+the imperative code employs a for-loop to iteratively invoke 
 `paramsApplyToParseObj()`, whereas the functional code invokes 
-`paramsApplyToParseObj()` wherein it recurses into itself until the 
-`parseObjKeysItr` object's `.next()` method returns a `parseObjKeysItrn` object 
-with property `.done` === `true`. While the code to `paramsApplyToParseObj()` is 
-not shown, it can be inferred that it treats `parseObjKeysItr` and 
-`parseObjKeysItrn` the same way `paramsApply()` treats `partialParseItr` and 
-`partialParseItrn`.
+`Array.prototype.reduce()` to do so.
 
 Given that imperative and functional Feplet are equivalent in performance, and 
 that functional is more verbose than imperative, why choose functional over 
@@ -248,9 +257,9 @@ imperative?
 
 Any answer to that is subjective. The package size difference is so small that 
 it is not a compelling reason. Both paradigms can be criticized as being hard to 
-follow. Functional because it is functional. Imperative because for-loops do 
-nothing but cause side-effects, and they don't explicitly declare which data 
-they mutate. Case in point:
+follow. Functional because it is functional. Imperative because for-loops 
+cause side-effects outside the scope of the loop, and they don't explicitly 
+declare which data they mutate. Case in point:
 
 ```
 _delimiterUnicodes = _delimiterUnicodes || delimiterUnicodes || delimiterUnicodes_;
@@ -261,12 +270,9 @@ worthwhile to have adopted the functional programming paradigm. But even if we
 had to make a similar choice for a new project, and nothing new was to be 
 learned, it is a great exercise in discipline to stay focused implementing a 
 paradigm that best fits the needs of a project. You'll find that this pays off 
-when optimizing performance, and in the course of maintaining a project.
-
-Consider the alternative: Being undisciplined and unfocused. It is an excellent 
-strategy for starring in reality television. It is a good to excellent strategy 
-for separating donors, lenders, and buyers from their money. But it is a 
-terrible strategy for software engineering!
+when optimizing performance, and in the course of maintaining a project. There's
+also the possibility of a future project being programmed in a purely functional 
+language. There's no harm in being ready.
 
 ### Thanks for Visiting!
 
