@@ -3,7 +3,7 @@
 // browsers. Given that this is a relatively small file, it is easier to keep the code in one file.
 'use strict';
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 var hogan = require('../lib/hogan.js/lib/hogan.js');
 
@@ -30,7 +30,7 @@ COLLECTORS: {
     }
 
     return {
-      contextKeysPart: dataKeys
+      contextKeys: dataKeys
     };
   };
 
@@ -759,7 +759,7 @@ PARAMS_APPLIER: {
       /* istanbul ignore if */
 
 
-      if (partialShort === partialFull || !partials[partialShort]) {
+      if (partialFull === partialShort || !partials[partialShort]) {
         continue;
       }
 
@@ -789,15 +789,7 @@ PARAMS_APPLIER: {
 
       if (partialsComp[partialShort].parseArr) {
         partialParseArr = partialsComp[partialShort].parseArr;
-      } // DEPRECATED.
-      // TODO: This accommodates old usage of partialsComp. To be removed.
-      else {
-          partialParseArr = hogan.parse(hogan.scan(partials[partialShort], options.delimiters), partials[partialShort], options);
-          partialsComp[partialShort] = {
-            parseArr: partialParseArr,
-            compilation: partialsComp[partialShort]
-          };
-        }
+      }
 
       var _paramsApply2 = paramsApply({
         contextKeys: contextKeys,
@@ -817,8 +809,15 @@ PARAMS_APPLIER: {
           delimiters: delimiterUnicodes
         }, options);
         var compilationWithUnicodes = hogan.generate(hogan.parse(hogan.scan(partialText, delimiterUnicodes), partialText, optionsWithUnicodes), partialText, optionsWithUnicodes);
-        partials[partialFull] = compilationWithUnicodes.render(paramsObj); // Then, write to partialsComp with previous render as partial text and with regular delimiters and options.
+        partials[partialFull] = compilationWithUnicodes.render(paramsObj);
+      }
 
+      if (partialFull !== partialShort && !partials[partialFull]) {
+        partials[partialFull] = partials[partialShort];
+      }
+
+      if (delimiterUnicodes && partialText !== partialText_ || !Object.keys(partialsComp[partialFull]).length) {
+        // Then, write to partialsComp with previous render as partial text and with regular delimiters and options.
         var parseArr = hogan.parse(hogan.scan(partials[partialFull], options.delimiters), partials[partialFull], options);
         partialsComp[partialFull] = {
           parseArr: parseArr,
@@ -851,17 +850,17 @@ METHODS: {
     }),
         dataKeys = _dataKeysCollect4.dataKeysPart;
 
-    var contextKeysPart = [];
+    var contextKeys = [];
 
     if (dataKeys.length) {
       var _contextKeysCollect = contextKeysCollect({
         dataKeys: dataKeys
       });
 
-      contextKeysPart = _contextKeysCollect.contextKeysPart;
+      contextKeys = _contextKeysCollect.contextKeys;
     }
 
-    return contextKeysPart;
+    return contextKeys;
   };
 
   var preProcessPartialParams = function preProcessPartialParams(text, compilation_, partials_, partialsComp_, contextKeys_, context, options_) {
@@ -930,16 +929,7 @@ METHODS: {
     var partialsKeys = Object.keys(partials);
 
     for (var i = 0, l = partialsKeys.length; i < l; i++) {
-      var partialKey = partialsKeys[i]; // DEPRECATED.
-      // TODO: This accommodates old usage of partialsComp. To be removed.
-
-      if (!partialsComp[partialKey].compilation) {
-        var parseArr = hogan.parse(hogan.scan(partials[partialKey], options.delimiters), partials[partialKey], options);
-        partialsComp[partialKey] = {
-          parseArr: parseArr,
-          compilation: partialsComp[partialKey]
-        };
-      }
+      var partialKey = partialsKeys[i];
 
       var _preProcessPartialPar = preProcessPartialParams(partials[partialKey], partialsComp[partialKey].compilation, partials, partialsComp, contextKeys, context, options);
 
@@ -1038,7 +1028,8 @@ METHODS: {
       partialsComp: partialsComp
     };
   };
-} // PREPARE FOR EXPORT.
+}
+/* PREPARE FOR EXPORT */
 
 
 function Feplet(context, partials, partialsComp, contextKeys, options) {
@@ -1047,7 +1038,8 @@ function Feplet(context, partials, partialsComp, contextKeys, options) {
   this.partialsComp = partialsComp || {};
   this.contextKeys = contextKeys || preProcessContextKeys(this.context);
   this.options = options || {};
-} // STATIC METHODS.
+}
+/* STATIC METHODS */
 
 
 Object.assign(Feplet, hogan); // hogan is not a class so the constructor does not get overridden.
@@ -1057,7 +1049,8 @@ Feplet.preProcessContextKeys = preProcessContextKeys;
 Feplet.preProcessPartialParams = preProcessPartialParams;
 Feplet.registerPartial = registerPartial;
 Feplet.render = render;
-Feplet.unregisterPartial = unregisterPartial; // INSTANCE METHODS.
+Feplet.unregisterPartial = unregisterPartial;
+/* INSTANCE METHODS */
 
 Feplet.prototype.compile = compile;
 Feplet.prototype.preProcessPartialParams = preProcessPartialParams;

@@ -29,7 +29,7 @@ COLLECTORS: {
       }
     }
 
-    return {contextKeysPart: dataKeys};
+    return {contextKeys: dataKeys};
   };
 
   var dataKeysWithDotNotationAdd = function (args) {
@@ -796,7 +796,7 @@ PARAMS_APPLIER: {
       }
 
       /* istanbul ignore if */
-      if (partialShort === partialFull || !partials[partialShort]) {
+      if (partialFull === partialShort || !partials[partialShort]) {
         continue;
       }
 
@@ -824,22 +824,6 @@ PARAMS_APPLIER: {
 
       if (partialsComp[partialShort].parseArr) {
         partialParseArr = partialsComp[partialShort].parseArr;
-      }
-      // DEPRECATED.
-      // TODO: This accommodates old usage of partialsComp. To be removed.
-      else {
-        partialParseArr = hogan.parse(
-          hogan.scan(
-            partials[partialShort],
-            options.delimiters
-          ),
-          partials[partialShort],
-          options
-        );
-        partialsComp[partialShort] = {
-          parseArr: partialParseArr,
-          compilation: partialsComp[partialShort]
-        };
       }
 
       ({
@@ -870,7 +854,16 @@ PARAMS_APPLIER: {
           optionsWithUnicodes
         );
         partials[partialFull] = compilationWithUnicodes.render(paramsObj);
+      }
 
+      if (partialFull !== partialShort && !partials[partialFull]) {
+        partials[partialFull] = partials[partialShort];
+      }
+
+      if (
+        (delimiterUnicodes && partialText !== partialText_) ||
+        !Object.keys(partialsComp[partialFull]).length
+      ) {
         // Then, write to partialsComp with previous render as partial text and with regular delimiters and options.
         const parseArr = hogan.parse(
           hogan.scan(
@@ -910,15 +903,15 @@ METHODS: {
       parentObjAsStr: '',
     });
 
-    let contextKeysPart = [];
+    let contextKeys = [];
 
     if (dataKeys.length) {
-      ({contextKeysPart} = contextKeysCollect({
+      ({contextKeys} = contextKeysCollect({
         dataKeys
       }));
     }
 
-    return contextKeysPart;
+    return contextKeys;
   };
 
   var preProcessPartialParams =
@@ -987,23 +980,6 @@ METHODS: {
 
     for (let i = 0, l = partialsKeys.length; i < l; i++) {
       const partialKey = partialsKeys[i];
-
-      // DEPRECATED.
-      // TODO: This accommodates old usage of partialsComp. To be removed.
-      if (!partialsComp[partialKey].compilation) {
-        const parseArr = hogan.parse(
-          hogan.scan(
-            partials[partialKey],
-            options.delimiters
-          ),
-          partials[partialKey],
-          options
-        );
-        partialsComp[partialKey] = {
-          parseArr,
-          compilation: partialsComp[partialKey]
-        };
-      }
 
       ({
         _contextKeys,
@@ -1121,7 +1097,7 @@ METHODS: {
   };
 }
 
-// PREPARE FOR EXPORT.
+/* PREPARE FOR EXPORT */
 
 function Feplet(context, partials, partialsComp, contextKeys, options) {
   this.context = context || {};
@@ -1131,7 +1107,7 @@ function Feplet(context, partials, partialsComp, contextKeys, options) {
   this.options = options || {};
 }
 
-// STATIC METHODS.
+/* STATIC METHODS */
 
 Object.assign(Feplet, hogan); // hogan is not a class so the constructor does not get overridden.
 
@@ -1147,7 +1123,7 @@ Feplet.render = render;
 
 Feplet.unregisterPartial = unregisterPartial;
 
-// INSTANCE METHODS.
+/* INSTANCE METHODS */
 
 Feplet.prototype.compile = compile;
 
