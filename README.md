@@ -271,8 +271,9 @@ had to make a similar choice for a new project, and nothing new was to be
 learned, it is a great exercise in discipline to stay focused implementing a 
 paradigm that best fits the needs of a project. You'll find that this pays off 
 when optimizing performance, and in the course of maintaining a project. There's
-also the possibility of a future project being programmed in a purely functional 
-language. There's no harm in being ready.
+also the possibility of a future project of yours being programmed in a purely 
+functional language, or strongly functional paradigm. There's no harm in being 
+ready!
 
 ### Thanks for Visiting!
 
