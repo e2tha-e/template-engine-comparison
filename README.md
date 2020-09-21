@@ -16,10 +16,6 @@ What is important to both the developers and consumers of Feplet is that the
 implemented paradigm (functional) does not offer an inferior experience to the 
 alternative (imperative).
 
-If the generalizations about public disinterest in this benchoff can be allowed 
-as givens (i.e. not requiring scientific rigor), we'll proceed then with 
-maintaining this readme with occasional updates incorporating new information.
-
 ### Abstract
 
 These are a series of tests benchmarking the 
@@ -121,8 +117,9 @@ node handlebars/run-7.js
 ### Imperative vs. Functional
 
 Imperative Feplet is actually pretty functional, given that it heavily and 
-unavoidably employs recursion. The imperative parts are mostly for-loops. 
-Functional Feplet replaces those for-loops with recursive functions.
+unavoidably employs recursion. To make Feplet more imperative, we've replaced 
+`Array.prototype.reduce()` and recursive functions with for-loops where 
+possible.
 
 #### Imperative Feplet
 
@@ -245,11 +242,6 @@ var paramsApply = function (args) {
   };
 };
 ```
-
-The main difference between the imperative and functional code examples is that 
-the imperative code employs a for-loop to iteratively invoke 
-`paramsApplyToParseObj()`, whereas the functional code invokes 
-`Array.prototype.reduce()` to do so.
 
 Given that imperative and functional Feplet are equivalent in performance, and 
 that functional is more verbose than imperative, why choose functional over 
