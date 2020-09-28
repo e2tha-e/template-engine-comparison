@@ -1,13 +1,13 @@
 # Template Engine Benchoff
 
-#### Update: 2020 February
+#### Update: 2020 September
 
 This repository is primarily being maintained for the purpose of providing a 
 test bed on which to benchmark future versions of 
 <a href="https://github.com/electric-eloquence/feplet" target="_blank">Feplet</a>. 
 While it is compared against Handlebars, it is unlikely that anyone will abandon 
 Handlebars on account of performance. The tests herein benchmark extreme cases, 
-and the resultant build times of 20 seconds or more are unlikely to occur under 
+and the resultant build times of close to 20 seconds are unlikely to occur under 
 normal usage. Even if such build times actually occur, most teams will readily 
 accept those costs, given that Handlebars is widely known, tried and tested, and 
 so forth. Furthermore, very few people actually care whether a functional or 
@@ -38,34 +38,36 @@ introduced to programming, so the functional code could also be hard to follow
 for the uninitiated.
 
 However, the functional paradigm wasn't just tacked on willy-nilly. For Feplet, 
-recursion was unavoidable since template tags are nestable, and recursion is the 
-only reasonable way to dive into nested structures. It was not much of an 
-architectural leap to ensure that all functions returned values, and that they 
-didn't mutate data outside their scopes.
+recursion was practically unavoidable since template tags are nestable, and 
+recursion is the only practical way to dive into nested structures in 
+JavaScript. It was not much of an architectural leap to ensure that all 
+functions returned values, and that they didn't mutate data outside their 
+scopes.
 
 <a href="#imperative-vs-functional">A deeper dive into functional programming.</a>
 
 ### Versions
 
-The latest as of this writing, 2020 February:
+The latest as of this writing, 2020 September:
 
-* Feplet: 1.2.0
-* Handlebars: 4.7.3
+* Feplet: 1.2.2
+* Handlebars: 4.7.6
 
 ### System
 
 * MacBook Pro (Retina, 15-inch, Mid 2015)
 * Intel Core i7-4980HQ @ 2.80GHz
 * 16 GB 1600 MHz DDR3
-* macOS Catalina 10.15.3 Host OS
+* macOS Catalina 10.15.6 Host OS
 * VirtualBox 6.1.2 r135662
-* Ubuntu 18.04.3 LTS Bionic Guest OS
+* Ubuntu 20.04 LTS Focal Guest OS
+* Node.js v12.16.2
 
 ### Bundle Sizes
 
 The minified all-in-one scripts for browser consumption:
 
-* Feplet: 24 KB
+* Feplet: 25 KB
 * Feplet imperative: 23 KB
 * Handlebars: 78 KB
 
@@ -92,15 +94,15 @@ Averages of ten runs:
 
 #### 6 patterns per pattern type
 
-* Feplet: 1.564 sec, 28.61 MB
-* Feplet imperative: 1.58 sec, 28.371 MB
-* Handlebars: 6.136 sec, 21.579 MB
+* Feplet: 1.628 sec, 28.283 MB
+* Feplet imperative: 1.61 sec, 28.34 MB
+* Handlebars: 5.87 sec, 21.63 MB
 
 #### 7 patterns per pattern type
 
-* Feplet: 3.927 sec, 36.981 MB
-* Feplet imperative: 3.908 sec, 37.167 MB
-* Handlebars: 20.349 sec, 45.749 MB
+* Feplet: 4.04 sec, 37.38 MB
+* Feplet imperative: 3.963 sec, 36.91 MB
+* Handlebars: 17.40 sec, 46.06 MB
 
 ### Do It Yourself
 
@@ -243,9 +245,9 @@ var paramsApply = function (args) {
 };
 ```
 
-Given that imperative and functional Feplet are equivalent in performance, and 
-that functional is more verbose than imperative, why choose functional over 
-imperative?
+Given that imperative and functional Feplet are nearly equivalent in 
+performance, and that functional is more verbose than imperative, why choose 
+functional over imperative?
 
 Any answer to that is subjective. The package size difference is so small that 
 it is not a compelling reason. Both paradigms can be criticized as being hard to 
@@ -263,9 +265,8 @@ had to make a similar choice for a new project, and nothing new was to be
 learned, it is a great exercise in discipline to stay focused implementing a 
 paradigm that best fits the needs of a project. You'll find that this pays off 
 when optimizing performance, and in the course of maintaining a project. There's
-also the possibility of a future project of yours being programmed in a purely 
-functional language, or strongly functional paradigm. There's no harm in being 
-ready!
+also the possibility of a future project being programmed in a purely functional 
+language, or strongly functional paradigm. There's no harm in being ready!
 
 ### Thanks for Visiting!
 
