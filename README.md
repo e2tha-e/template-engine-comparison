@@ -21,7 +21,7 @@ alternative (imperative).
 These are a series of tests benchmarking the 
 <a href="https://github.com/electric-eloquence/feplet" target="_blank">Feplet</a> 
 and Handlebars JavaScript template engines. They both use the Mustache template 
-engine as a starting point, and extend it with the ability to submit data 
+standard as a starting point, and extend it with the ability to submit data 
 parameters to partials, along with some additional modifications great and 
 small. In the benchmarking of Feplet, we also want to ensure that the 
 functionally programmed package does not significantly underperform its 
@@ -264,9 +264,10 @@ worthwhile to have adopted the functional programming paradigm. But even if we
 had to make a similar choice for a new project, and nothing new was to be 
 learned, it is a great exercise in discipline to stay focused implementing a 
 paradigm that best fits the needs of a project. You'll find that this pays off 
-when optimizing performance, and in the course of maintaining a project. There's
-also the possibility of a future project being programmed in a purely functional 
-language, or strongly functional paradigm. There's no harm in being ready!
+when optimizing performance, and in the course of maintaining a project. There 
+is also the possibility of a future project being programmed in a purely 
+functional language, or strongly functional paradigm. There is no harm in being 
+prepared!
 
 ### Thanks for Visiting!
 
